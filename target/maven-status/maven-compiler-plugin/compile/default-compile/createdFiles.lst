@@ -1,0 +1,13 @@
+pho/findingsandiego/core/beans/Hair.class
+pho/findingsandiego/core/report/BurglarConsumer.class
+pho/findingsandiego/core/beans/Eye.class
+pho/findingsandiego/incremental/IncrementalSearchRefactoredSandbox.class
+pho/findingsandiego/core/beans/Gender.class
+pho/findingsandiego/incremental/IncrementalSearchSandbox.class
+pho/findingsandiego/core/beans/Burglar.class
+pho/findingsandiego/incremental/IncrementalSearch.class
+pho/findingsandiego/core/loader/Loader.class
+pho/findingsandiego/core/report/BurglarReport.class
+pho/findingsandiego/core/Sandbox.class
+pho/findingsandiego/core/converter/BurglarConverter.class
+pho/findingsandiego/incremental/IncrementalSearchRefactored.class
