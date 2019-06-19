@@ -3,12 +3,14 @@ package pho.findingsandiego.functional.finder;
 import pho.findingsandiego.core.beans.Burglar;
 import pho.findingsandiego.core.beans.Gender;
 import pho.findingsandiego.core.beans.Hair;
+import pho.findingsandiego.core.beans.Eye;
 
 import java.util.Objects;
 import java.util.function.Predicate;
 
 import static pho.findingsandiego.functional.finder.BuilderExceptionMessages.EXCEPTION_GENDER;
 import static pho.findingsandiego.functional.finder.BuilderExceptionMessages.EXCEPTION_HAIR;
+import static pho.findingsandiego.functional.finder.BuilderExceptionMessages.EXCEPTION_EYE;
 
 public class BurglarPredicateBuilder {
 
@@ -34,6 +36,11 @@ public class BurglarPredicateBuilder {
         Objects.requireNonNull(hair, EXCEPTION_HAIR.getMessage());
         appendPredicate(b -> b.hair.equals(hair));
         return this;
+    }
+    
+    public BurglarPredicateBuilder withEyeColor(final Eye eye) {
+        Objects.requireNonNull(eye, EXCEPTION_EYE.getMessage());
+        return null;
     }
 
     public Predicate<Burglar> buildPredicate() {
