@@ -21,12 +21,8 @@ public class BurglarFinder {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         BurglarConsumer consumer = new BurglarConsumer();
-        List<Burglar> burglars = Loader.loadData();
+        List<Burglar> burglars = Loader.loadData(args[0]);
         BurglarReport report = new BurglarReport(consumer);
-
- //       BurglarPredicateBuilder errorBuilder = BurglarPredicateBuilder
- //               .newBurglarPredicate()
- //               .withGender(null);
 
         Predicate<Burglar> predicate1 = BurglarPredicateBuilder
                 .newBurglarPredicate()

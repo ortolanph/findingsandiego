@@ -17,7 +17,7 @@ public class LinearSearchRefactoredSandbox {
 
     public static void main(String[] args) throws Exception{
         BurglarConsumer consumer = new BurglarConsumer();
-        List<Burglar> burglars = Loader.loadData();
+        List<Burglar> burglars = Loader.loadData(args[0]);
         BurglarReport report = new BurglarReport(consumer);
 
         LinearSearchRefactored search = new LinearSearchRefactored(burglars);

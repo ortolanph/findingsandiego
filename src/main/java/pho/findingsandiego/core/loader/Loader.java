@@ -14,11 +14,11 @@ public class Loader {
 
     private static final String RESOURCE_NAME = "carmensandiego.csv";
 
-    public static List<Burglar> loadData() throws URISyntaxException, IOException {
+    public static List<Burglar> loadData(String filename) throws URISyntaxException, IOException {
         BurglarConverter converter = new BurglarConverter();
 
         return Files
-                .lines(Path.of(ClassLoader.getSystemResource(RESOURCE_NAME).toURI()))
+                .lines(Path.of(filename))
                 .map(converter)
                 .collect(Collectors.toList());
     }

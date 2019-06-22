@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <build>
+        <finalName>sandiego</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
