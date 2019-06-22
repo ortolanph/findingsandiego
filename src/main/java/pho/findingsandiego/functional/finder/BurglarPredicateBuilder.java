@@ -8,9 +8,7 @@ import pho.findingsandiego.core.beans.Eye;
 import java.util.Objects;
 import java.util.function.Predicate;
 
-import static pho.findingsandiego.functional.finder.BuilderExceptionMessages.EXCEPTION_GENDER;
-import static pho.findingsandiego.functional.finder.BuilderExceptionMessages.EXCEPTION_HAIR;
-import static pho.findingsandiego.functional.finder.BuilderExceptionMessages.EXCEPTION_EYE;
+import static pho.findingsandiego.functional.finder.BuilderExceptionMessages.*;
 
 public class BurglarPredicateBuilder {
 
@@ -40,7 +38,20 @@ public class BurglarPredicateBuilder {
     
     public BurglarPredicateBuilder withEyeColor(final Eye eye) {
         Objects.requireNonNull(eye, EXCEPTION_EYE.getMessage());
-        return null;
+        appendPredicate(b -> b.eye.equals(eye));
+        return this;
+    }
+
+    public BurglarPredicateBuilder withOccupation(final String occupation) {
+        Objects.requireNonNull(occupation, EXCEPTION_OCCUPATION.getMessage());
+        appendPredicate(b -> b.occupation.equals(occupation));
+        return this;
+    }
+
+    public BurglarPredicateBuilder withFavoriteFood(final String favoriteFood) {
+        Objects.requireNonNull(favoriteFood, EXCEPTION_FAVORITE_FOOD.getMessage());
+        appendPredicate(b -> b.favoriteFood.equals(favoriteFood));
+        return this;
     }
 
     public Predicate<Burglar> buildPredicate() {
