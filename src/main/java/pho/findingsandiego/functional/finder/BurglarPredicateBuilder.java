@@ -62,7 +62,7 @@ public class BurglarPredicateBuilder {
         if(rootPredicate == null) {
             rootPredicate = predicate;
         } else {
-            rootPredicate.and(predicate);
+            rootPredicate = rootPredicate.and(predicate);
         }
     }
 

@@ -46,7 +46,7 @@ public class PredicateSearch {
         if(rootPredicate == null) {
             rootPredicate = b -> b.gender.equals(gender);
         } else {
-            rootPredicate.and(b -> b.gender.equals(gender));
+            rootPredicate = rootPredicate.and(b -> b.gender.equals(gender));
         }
     }
 
@@ -54,7 +54,7 @@ public class PredicateSearch {
         if(rootPredicate == null) {
             rootPredicate = b -> b.hair.equals(hair);
         } else {
-            rootPredicate.and(b -> b.hair.equals(hair));
+            rootPredicate = rootPredicate.and(b -> b.hair.equals(hair));
         }
     }
 
@@ -62,7 +62,7 @@ public class PredicateSearch {
         if(rootPredicate == null) {
             rootPredicate = b -> b.eye.equals(eye);
         } else {
-            rootPredicate.and(b -> b.eye.equals(eye));
+            rootPredicate = rootPredicate.and(b -> b.eye.equals(eye));
         }
     }
 
@@ -70,7 +70,7 @@ public class PredicateSearch {
         if(rootPredicate == null) {
             rootPredicate = b -> b.occupation.equals(occupation);
         } else {
-            rootPredicate.and(b -> b.occupation.equals(occupation));
+            rootPredicate = rootPredicate.and(b -> b.occupation.equals(occupation));
         }
     }
 
