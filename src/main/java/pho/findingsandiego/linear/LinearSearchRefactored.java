@@ -23,6 +23,13 @@ public class LinearSearchRefactored {
                                 filterByHair(hair,
                                         filterByGender(gender, burglars)
                                 ))));
+/*        List<Burglar> genderResult = filterByGender(gender, burglars);
+        List<Burglar> hairResult = filterByHair(hair, genderResult);
+        List<Burglar> eyeResult = filterByEye(eye, hairResult);
+        List<Burglar> occupationResult = filterByOccupation(occupation, eyeResult);
+        List<Burglar> result = filterByFavoriteFood(favoriteFood, occupationResult);
+
+        return result;*/
     }
 
     private List<Burglar> filterByGender(Gender gender, List<Burglar> burglars) {
