@@ -68,5 +68,14 @@ public class BurglarFinder {
                 .buildPredicate();
         List<Burglar> results5 = burglars.stream().filter(predicate5).collect(Collectors.toList());
         report.report(String.format("BUILDER SEARCH - By Gender, Hair, Eye, Occupation and Favorite Food: [%s, %s, %s, %s, %s]", Gender.FEMALE, Hair.BROWN, Eye.BROWN, BURGLAR_OCCUPATION, MEXICAN_FOOD), results5);
+
+        Predicate<Burglar> predicate6 = BurglarPredicateBuilder
+                .newBurglarPredicate()
+                .withGender(Gender.FEMALE)
+                .withOccupation(BURGLAR_OCCUPATION)
+                .withFavoriteFood(MEXICAN_FOOD)
+                .buildPredicate();
+        List<Burglar> results6 = burglars.stream().filter(predicate6).collect(Collectors.toList());
+        report.report(String.format("BUILDER SEARCH - By Gender, Occupation and Favorite Food: [%s, %s, %s]", Gender.FEMALE, BURGLAR_OCCUPATION, MEXICAN_FOOD), results6);
     }
 }
