@@ -6,7 +6,7 @@ This code shows some ways on how Carmen or other gang member can be found using 
 
 ## Article
 
-TBD
+https://javalotsofbeans.wordpress.com/2019/06/28/where-in-the-code-is-carmen-sandiego/
 
 ## How to run the examples
 
